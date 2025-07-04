@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  Viem Extension for Arbitrum Timeboost Protocol
+  Viem Extension for Arbitrum
 <p>
 
 <br>
