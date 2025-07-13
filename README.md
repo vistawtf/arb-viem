@@ -13,7 +13,7 @@
 ## Installation
 
 ```bash
-npm install @vistawtf/arb-viem
+npm install arb-viem
 ```
 
 ## Quick Start
