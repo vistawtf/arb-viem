@@ -1,15 +1,35 @@
 {
-  "name": "tb-viem",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "arb-viem",
+  "version": "0.0.1-beta.1",
+  "description": "Viem extensions for the Arbitrum Stack",
+  "license": "ISC",
+  "author": "vistawtf",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/node": "^24.0.3",
     "@viem/anvil": "^0.0.10",
@@ -18,11 +38,13 @@
     "msw": "^2.10.2",
     "prettier": "^3.6.0",
     "tsx": "^4.20.3",
+    "tsup": "^8.2.3",
     "typescript": "^5.8.3",
     "viem": "^2.31.4",
     "vitest": "^3.2.4"
   },
-  "dependencies": {
-    "wagmi": "^2.15.6"
+  "dependencies": {},
+  "peerDependencies": {
+    "viem": "^2.0.0"
   }
 }
